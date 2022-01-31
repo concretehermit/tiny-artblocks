@@ -15,9 +15,10 @@ Features:
 - A framework similar to [canvas-sketch](https://github.com/mattdesl/canvas-sketch)
 - Live reload on code changes
 - Strong minification/compression
-- Prints minified bytes and approximate ETH deploy cost on each reload
-- A robust pseudo-random number generator and hashing function (for `tokenData` seed)
-  - See [PRNG](#prng) for an alternative
+- Prints minified bytes ~~ and approximate ETH deploy cost ~~ on each reload
+  ~~ - A robust pseudo-random number generator and hashing function (for `tokenData` seed) ~~
+  ~~ - See [PRNG](#prng) for an alternative ~~
+- Uses fxrand for prng
 - Some utilities for color, math, random, and vector to get you started
 - Additional function analysis, listing the byte size of the largest functions after minification
 - Reports syntax errors in the browser

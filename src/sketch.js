@@ -1,12 +1,15 @@
 import * as random from "./util/random";
 import { Lch } from "./util/color";
 
-export default (hash) => {
+export default (fxhash) => {
+  // these are the variables you can use as inputs to your algorithms
   // You may want to remove this line for production
-  console.log(hash);
+  console.log(fxhash); // the 64 chars hex number fed to your algorithm
+  // console.log(fxrand()); // deterministic PRNG function, use it instead of Math.random()
 
-  // set the shared PRNG to new seed
-  random.set_seed(hash);
+  // fxrand is a deterministic PRNG function, use it instead of Math.random()
+  // we set fxrand as new seed for random functions
+  random.set_seed(fxrand);
 
   const colors = [
     Lch(50, 50, random.range(180, 360)),

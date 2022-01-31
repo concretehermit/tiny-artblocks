@@ -1,14 +1,4 @@
 import sketch from "./sketch.js";
-import * as random from "./util/random";
-
-// See if tokenData exists from ArtBlocks input
-// It may come in as object or string depending on context
-let hash =
-  typeof tokenData !== "undefined"
-    ? typeof tokenData === "string"
-      ? tokenData
-      : tokenData.hash
-    : random.getRandomHash();
 
 export default (() => {
   let W = window,
@@ -39,6 +29,6 @@ export default (() => {
 
   W.addEventListener("resize", resize);
   resize();
-  render = sketch(hash);
+  render = sketch(fxhash);
   draw();
 })();
