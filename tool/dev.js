@@ -12,7 +12,6 @@ const writeFile = promisify(fs.writeFile);
 const { handleError, printError } = require("./error");
 
 const mode = process.argv.includes("--dev") ? "development" : "production";
-const gwei = 125;
 const INPUT_FILE = path.resolve(__dirname, "../src/index.js");
 const OUTPUT_FILE = path.resolve(__dirname, "../www/main.js");
 const OUTPUT_FILE_MIN = path.resolve(__dirname, "../www/main.min.js");
@@ -65,9 +64,6 @@ async function build() {
     await writeFile(OUTPUT_FILE_MIN, min);
 
     console.log(`Minified Bytes: ${min.length} (${prettyBytes(min.length)})`);
-
-    const eth = 675 * min.length * gwei * (1 / 1000000000);
-    console.log(`~${eth.toFixed(4)} ETH at ${gwei} gwei`);
 
     return min;
   } catch (err) {
