@@ -1,4 +1,8 @@
-# tiny-artblocks
+# tiny-fxhash
+
+A starter kit for [FX_hash](https://fxhash.xyz) artworks.
+
+based on [tiny-artblocks](https://github.com/mattdesl/tiny-artblocks) by Mattdesl:
 
 A starter kit for tiny and robust [ArtBlocks](https://artblocks.io/) artworks with plain vanilla JavaScript.
 
